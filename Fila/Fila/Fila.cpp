@@ -59,7 +59,7 @@ void menu()
 void inicializar()
 {
 
-	// se a lista já possuir elementos
+	// se a lista jï¿½ possuir elementos
 	// libera a memoria ocupada
 	NO* aux = inicio;
 	while (aux != NULL) {
@@ -88,13 +88,32 @@ void insere()
 	cin >> novo->valor;
 	novo->prox = NULL;
 
+	if (fim == NULL)
 
+	{
+		return;
+	}
+
+	cout << "Digite o elemento: ";
+	cin >> novo->valor;
+	novo->prox = NULL;
 }
 
 void remove()
 {
 
+	if (inicio == NULL);
+	{
+		cout << "Fila vazia. ";
+		return;
+	}
 
+	else
 
+	{ 
+		NO* aux = inicio;
+		cout << "Elemento da fila a ser deletado: ": << inicio->valor << endl;
+		inicio = inicio->prox;
+		free(aux);
+	}
 }
-
